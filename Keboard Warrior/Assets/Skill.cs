@@ -1,24 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Skill : MonoBehaviour
 {
-    delegate void SkillDelegate(int n);
-
-    List<SkillDelegate> SkillList = new List<SkillDelegate> { };
+    public delegate void SkillDelegate();
 
     Dictionary<string, SkillDelegate> SkillDictionary = new Dictionary<string, SkillDelegate>();
-    SkillDictionary.Add("firebress", Skill.Firebress);
-    
-    SkillDelegate input = SkillDictionary["icebress"];
 
-    public void Icebress(int n)
+    Skill()
+    {
+        SkillDictionary.Add("icebreath", Icebreath);
+        SkillDictionary.Add("firebreath", Firebreath);
+        SkillDictionary.Add("punch", Punch);
+    }
+
+    public void Icebreath()
     {
 
     }
-    public void Firebress(int n)
+
+    public void Firebreath()
     {
 
     }
+
+    public void Punch()
+    {
+
+    }
+
 }
