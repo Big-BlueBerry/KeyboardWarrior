@@ -5,9 +5,9 @@ public class Skill : MonoBehaviour
 {
     public delegate void SkillDelegate();
 
-    Dictionary<string, SkillDelegate> SkillDictionary = new Dictionary<string, SkillDelegate>();
-
-    Skill()
+    public Dictionary<string, SkillDelegate> SkillDictionary = new Dictionary<string, SkillDelegate>();
+    
+    public Skill()
     {
         SkillDictionary.Add("icebreath", Icebreath);
         SkillDictionary.Add("firebreath", Firebreath);
@@ -16,17 +16,17 @@ public class Skill : MonoBehaviour
 
     public void Icebreath()
     {
-
+        Debug.Log("Icebreath 발동!!");
     }
 
     public void Firebreath()
     {
-
+        Debug.Log("Firebreath 발동!!");
     }
 
     public void Punch()
     {
-
+        Debug.Log("Punch 발동!!");
     }
 
 }
